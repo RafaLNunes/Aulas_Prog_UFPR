@@ -3,8 +3,15 @@
 # sem pesar demais puxando toda a biblio
 
 import random as rnd
+import ath
 
 def main():
+    Rand_import_test()
+
+def Math_import_test():
+    print("Teste")
+
+def Rand_import_test():
     ruido = rnd.random()
 
     porta = rnd.randint(10000,655402)
