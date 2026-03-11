@@ -14,8 +14,8 @@ def exibir_matrix(matrix):
 def rand_texture():
     #aqui vem outra
 
-    line = int(input("N° de Linhas: "))
-    colu = int(input("N° de Colunas: "))
+    line = rd.randint(0,1050)
+    colu = rd.randint(0,1050)
 
     matrix = []
     for i in range(line):
