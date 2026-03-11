@@ -2,9 +2,9 @@ import random as rd
 
 def main():
 
-    rede = []
+    rede = {}
 
-    ids_search = [rd.randint(1000, 9000), rd.randint(1000, 9000), 3103, 3105]
+    ids_search = [3103, 3105]
 
     for node_id in ids_search:
 
