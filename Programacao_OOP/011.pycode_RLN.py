@@ -4,10 +4,10 @@ import random as rd
 def main():
     ler = np.array([25.4,26.1,24.8,25.9,27.2])
 
-    ajust = ler +2.0
+    ajust = ler + 2.0
 
     print(f"Temperatura: {ajust}")
-    print(f"Média: {ler:.2f}")
+    print(f"Média: {ler}") # :.2f nãoi ta funcionando aqui
     print(f"Desvio Padrão: {np.std(ler):.2f}")
 
     matrix = np.array([
