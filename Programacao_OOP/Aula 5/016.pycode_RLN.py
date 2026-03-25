@@ -58,7 +58,7 @@ def Get_List(lista_info_sensores, limite):
     
 
 def main():
-    Exer = 4
+    Exer = 5
 
     match Exer:
         case 1:
@@ -151,7 +151,7 @@ def main():
 
         case 5:
             # teste
-            print("Hello")
+            # print("Hello")
 
 #-----------------------------------
 
