@@ -58,7 +58,7 @@ def Get_List(lista_info_sensores, limite):
     
 
 def main():
-    Exer = 5
+    Exer = 4
 
     match Exer:
         case 1:
@@ -148,7 +148,12 @@ def main():
 
             print(f"Index do Erro: {ficha_tec['index_erro']}\nValor do Erro: {ficha_tec['info_erro']:.2f}\nLimite de Valores: {entrega:.2f}")
     
+
         case 5:
-            
+            # teste
+            print("Hello")
+
+#-----------------------------------
+
 if __name__ == "__main__":
     main()
