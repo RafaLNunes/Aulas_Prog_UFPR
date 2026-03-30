@@ -1,4 +1,7 @@
 import random as rd
+import math
+import numpy as np
+from dataclasses import dataclass
 
 #Ex 1
 class Processador:
@@ -27,38 +30,156 @@ class Mascara:
 class Telemetria:
     def __init__(self, comp_name):
         self.__Componente_Nome = comp_name
-        self.list_Parametros = []
+        self.__list_Parametros = []
     
     def Add_parametro(self, dado_parametro):
-        self.list_Parametros.append(dado_parametro)
-
-
+        self.__list_Parametros.append(dado_parametro)
+    
+    def Leitura_Lista(self):
+        return self.__list_Parametros    
+    
 # Ex 4
-def Get_List(lista_info_sensores, limite):
+class Sensor_critico:
+    def __init__(self, limit):
+        self.__limite = limit
+        self.__list_sens = [
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10),        
+            rd.uniform(1,10)        
+        ]
+        
+    def Get_List(self):
+        
+        list_info = {
+            "index_erro": int,
+            "info_erro": float
+        }
+        
+        for index, item in enumerate(self.__list_sens):
+            print(f"Dado {index+1}°: {item:.2f}")
+        print()    
+        for index, item in enumerate(self.__list_sens):
+            print(f"Dado {index+1}°: {item:.2f}")
+            if item < self.__limite:
+                list_info["index_erro"] = index
+                list_info["info_erro"] = item
+                print("  ERROR")
+                break
+        
+        
+        
+        return list_info
     
-    Error_info = {
-        "index_erro": int,
-        "info_erro": float
-    }
+# Ex 5
+class Raio_secao:
+    def __init__(self):
+        self.__pi = math.pi
+    def Calc_Raio(self, raio):
+        return self.__pi * pow(raio,2)
+
+# Ex 6
+class ruido:
     
-    for index, item in enumerate(lista_info_sensores):
-        print(f"Dado {index+1}°: {item:.2f}")
-    print()    
-    for index, item in enumerate(lista_info_sensores):
-        print(f"Dado {index+1}°: {item:.2f}")
-        if item < limite:
-            Error_info["index_erro"] = index
-            Error_info["info_erro"] = item
-            print("  ERROR")
-            break
+    def __init__(self):
+        self.__ruido = rd.uniform(-0.5,0.5)
     
-    
-    
-    return Error_info
-    
+    def Capta_Ruido(self, val_parametro):
+        return self.__ruido+val_parametro
+
+# Ex 7
+class somatoria:
+    def __init__(self, n_vindo):
+        self.__atual_val = 0
+        self.__n = n_vindo
+    def Recursiva_Sum(self, valor):
+        
+        if self.__n == 0:
+            return self.__atual_val
+        self.__atual_val = self.__atual_val + valor
+        self.__n = self.__n-1
+        return self.Recursiva_Sum(self.__atual_val)
+        
+    def somat_leitura(self, valor):
+        resultado = self.Recursiva_Sum(valor)
+        return resultado
+        
+
+# Ex 8
+class IDdispositivo:
+    def __init__(self, disc_ID):
+        # Dicionário privado (__ indica que é privado)
+        self.__ID_dispositivos = disc_ID
+
+    def buscar_ID(self, id):
+
+        resultado = self.__ID_dispositivos.get(id, "ID não encontrado")
+        return resultado
+
+# Ex 9
+class analise_np:
+    def __init__(self):
+        self.__list_np_test = [
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10)
+        ]
+        self.__mascara_controle = []
+        
+    def analise(self):
+        array_list_np = np.array(self.__list_np_test)
+        self.__mascara_controle = array_list_np > 0
+            
+        
+        analise_result = array_list_np[self.__mascara_controle]
+        resultado = np.sum(analise_result)
+        return resultado
+
+# Ex 10
+@dataclass
+class Evento:
+    id: str
+    gravidade: str
+
+
 
 def main():
-    Exer = 5
+    Exer = 7
 
     match Exer:
         case 1:
@@ -111,7 +232,7 @@ def main():
             ## Passo C
             print("\n")
             print("-+-+-+-+-+-+-+-+-+-")
-            for index, param in enumerate(Telemetria_dados.list_Parametros):
+            for index, param in enumerate(Telemetria_dados.Leitura_Lista()):
                 print(f"Parametro {index+1}°: {param:.2f} V") 
             print("-+-+-+-+-+-+-+-+-+-")
             
@@ -120,40 +241,78 @@ def main():
         
         case 4:    
             # Ex 4
-            list_sens = [
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10),        
-                rd.uniform(1,10)        
-            ]
+
             
             entrega = float(input("Aqui virá o float tido como limite crítico (xx.x): "))
-            ficha_tec = Get_List(list_sens, entrega)
+            sensor_crit = Sensor_critico(entrega)
+            ficha_tec = sensor_crit.Get_List()
 
             print(f"Index do Erro: {ficha_tec['index_erro']}\nValor do Erro: {ficha_tec['info_erro']:.2f}\nLimite de Valores: {entrega:.2f}")
     
 
+            # ------------------------------------------------------------------------------
+            print("\n\n\n")
+            
         case 5:
-            # teste
-            # print("Hello")
+            # Ex 5
+            
+            ## Passo B
+            raio_info = float(input("Aqui virá  o raio do seu condutor: "))
+            ## Passo C
+            info_raio = Raio_secao()
+            Area_transversal = info_raio.Calc_Raio(raio_info)
+            print(f"A aseção transversal desse condutor é de {Area_transversal}")
+        
+            # ------------------------------------------------------------------------------
+            print("\n\n\n")
+            
+        case 6:
+            # Ex 6
+            ruido_inicial = float(input("Aqui, virá o parâmetro base para o ruido: "))
+            info_ruido = ruido()
+            ruido_final = info_ruido.Capta_Ruido(ruido_inicial)
+            
+            print(f"Esse é o Resultado do ruido: {ruido_final:.2f}")
+            
+        case 7:
+            # Ex 7
+            n_recursivo = int(input("Digite o numero de repetições: "))
+            val_inicial_sum = float(input("Digite o valor inicial do calculo: "))
+            sum_calc = somatoria(n_recursivo)
+            print(f"Somatória: {sum_calc.somat_leitura(val_inicial_sum)}")
+            
+        case 8:
+            #ex 8
+            
+            dados_iniciais = {
+                "Sala1": "001",
+                "Sala2": "001",
+                "Sala3": "003"
+            }
+            
+            gerenciador = IDdispositivo(dados_iniciais)
+            
+            print(f"IP Encontrado: {gerenciador.buscar_ID('Sala1')}")
+            print(f"IP Encontrado: {gerenciador.buscar_ID('sala10')}")
+            
+            
+        case 9:
+            # Ex 9
 
+            np_test_obj = analise_np()
+            resultado = np_test_obj.analise()
+            
+            print(f"\n Somatória: {resultado:.2f}")
+            
+        case 10:
+            # Ex 10
+            
+            valor_analise = float(input("Digite o valor numerico da gravidade: "))
+            Evnt = Evento(id="001",gravidade = "ALTA" if valor_analise > 10 else "BAIXA") 
+            print(f"ID: {Evnt.id}\nGravidade: {Evnt.gravidade}")
+            
 #-----------------------------------
 
 if __name__ == "__main__":
     main()
+    
