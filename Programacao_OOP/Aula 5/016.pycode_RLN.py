@@ -179,9 +179,9 @@ class Evento:
 
 
 def main():
-    Exer = 7
+    Exercicios = 7
 
-    match Exer:
+    match Exercicios:
         case 1:
             # Ex 1
             
