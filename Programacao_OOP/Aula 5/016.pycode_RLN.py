@@ -274,12 +274,18 @@ def main():
             
             print(f"Esse é o Resultado do ruido: {ruido_final:.2f}")
             
+            # ------------------------------------------------------------------------------
+            print("\n\n\n")
+            
         case 7:
             # Ex 7
             n_recursivo = int(input("Digite o numero de repetições: "))
             val_inicial_sum = float(input("Digite o valor inicial do calculo: "))
             sum_calc = somatoria(n_recursivo)
             print(f"Somatória: {sum_calc.somat_leitura(val_inicial_sum)}")
+            
+            # ------------------------------------------------------------------------------
+            print("\n\n\n")
             
         case 8:
             #ex 8
@@ -295,6 +301,8 @@ def main():
             print(f"IP Encontrado: {gerenciador.buscar_ID('Sala1')}")
             print(f"IP Encontrado: {gerenciador.buscar_ID('sala10')}")
             
+            # ------------------------------------------------------------------------------
+            print("\n\n\n")
             
         case 9:
             # Ex 9
