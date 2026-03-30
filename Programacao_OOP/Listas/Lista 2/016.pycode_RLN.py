@@ -133,31 +133,8 @@ class IDdispositivo:
 
 # Ex 9
 class analise_np:
-    def __init__(self):
-        self.__list_np_test = [
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10)
-        ]
+    def __init__(self, list_data):
+        self.__list_np_test = list_data   
         self.__mascara_controle = []
         
     def analise(self):
@@ -176,7 +153,7 @@ class Evento:
     gravidade: str
 
 def main():
-    Exercicios = 7
+    Exercicios = 9
 
     match Exercicios:
         case 1:
@@ -303,8 +280,32 @@ def main():
             
         case 9:
             # Ex 9
+            list_dt = [
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10),
+            rd.uniform(-10,10)
+            ]     
 
-            np_test_obj = analise_np()
+            np_test_obj = analise_np(list_dt)
             resultado = np_test_obj.analise()
             
             print(f"\n Somatória: {resultado:.2f}")
