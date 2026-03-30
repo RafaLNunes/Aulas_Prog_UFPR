@@ -1,7 +1,5 @@
 import numpy as np
-import time
 import random as rd
-import panda as pd
 
 def exibir_matrix(matrix):
     print("\n\n --------------- MATRIX ESTRUCTURE ---------------")
@@ -29,6 +27,7 @@ def rand_texture():
 
 def main():
     # aqui vem a central
+    rand_texture()
 
 if __name__ == "__main__":
     main()

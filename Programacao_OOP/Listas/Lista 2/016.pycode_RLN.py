@@ -120,7 +120,6 @@ class somatoria:
         resultado = self.Recursiva_Sum(valor)
         return resultado
         
-
 # Ex 8
 class IDdispositivo:
     def __init__(self, disc_ID):
@@ -175,8 +174,6 @@ class analise_np:
 class Evento:
     id: str
     gravidade: str
-
-
 
 def main():
     Exercicios = 7
