@@ -280,30 +280,14 @@ def main():
             
         case 9:
             # Ex 9
-            list_dt = [
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10),
-            rd.uniform(-10,10)
-            ]     
+            list_dt = []   
+            
+            x = 5
+            for i in range(x):
+                dt = float(input("Entre com o item da list: "))
+                list_dt.append(dt)
+            
+  
 
             np_test_obj = analise_np(list_dt)
             resultado = np_test_obj.analise()
