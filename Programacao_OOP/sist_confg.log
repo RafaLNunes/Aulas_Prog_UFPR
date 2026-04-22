@@ -1,0 +1,8 @@
+ERROR:root:Falha critica de divisão
+Traceback (most recent call last):
+  File "C:\Users\Aluno\Documents\GitHub\Aulas_Prog_UFPR\Programacao_OOP\Aula 7\018.pycode_RLN.py", line 7, in <module>
+    raio = -1/0
+           ~~^~
+ZeroDivisionError: division by zero
+CRITICAL:root:fatal work
+ERROR:root:Erro de trabalho
