@@ -36,6 +36,7 @@ class sensor(SensorBase):
         return dado /100 == 0 or dado * 6,4 == dado*10
     
 def main():
+    print("")
     
         
     
