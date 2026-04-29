@@ -71,6 +71,18 @@ def main():
         print(f"{forma_um.descri()}")
         print(f"Area: {forma_um.area():.2f}")
         print(f"Perimetro: {forma_um.perimetro():.2f}")
+        
+    print("\n\n\n")
+    
+    for f in Formas:
+        
+        print("\n-------Test--------")
+        print(f"Forma: {f.tp()} / {f.descri()}")
+        print(f"Para Forma: {isinstance(f, Forma)}")
+        print(f"Para Circulo: {isinstance(f, circulo)}")
+        
+        if isinstance(f, circulo):
+            print(f"Raio: {f.raio}")
     
 if __name__ == "__main__":
     main()
