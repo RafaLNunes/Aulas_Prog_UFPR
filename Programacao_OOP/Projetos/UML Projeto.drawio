@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Página-1" id="T0D2YHSJdkaun9ANJddP">
-    <mxGraphModel dx="1168" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1334" dy="853" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -39,37 +39,28 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="8VPdCWuIZnsOnVvE9_rt-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Motorista" vertex="1">
-          <mxGeometry height="60" width="30" x="69.93" y="360" as="geometry" />
-        </mxCell>
-        <mxCell id="8VPdCWuIZnsOnVvE9_rt-10" edge="1" parent="1" source="8VPdCWuIZnsOnVvE9_rt-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="49.93" y="510" />
-              <mxPoint x="49.93" y="390" />
-            </Array>
-            <mxPoint x="79.93" y="390" as="targetPoint" />
-          </mxGeometry>
+          <mxGeometry height="60" width="30" x="114.96000000000001" y="370" as="geometry" />
         </mxCell>
         <mxCell id="8VPdCWuIZnsOnVvE9_rt-56" edge="1" parent="1" source="8VPdCWuIZnsOnVvE9_rt-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="8VPdCWuIZnsOnVvE9_rt-57">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="280" y="570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8VPdCWuIZnsOnVvE9_rt-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Motorista Frota&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="60" width="30" x="69.93" y="480" as="geometry" />
-        </mxCell>
-        <mxCell id="8VPdCWuIZnsOnVvE9_rt-11" edge="1" parent="1" source="8VPdCWuIZnsOnVvE9_rt-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+        <mxCell id="8VPdCWuIZnsOnVvE9_rt-76" edge="1" parent="1" source="8VPdCWuIZnsOnVvE9_rt-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="40" y="720" />
-              <mxPoint x="40" y="400" />
-            </Array>
-            <mxPoint x="69.93" y="630" as="sourcePoint" />
-            <mxPoint x="79.93" y="400" as="targetPoint" />
+            <mxPoint x="130.03" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8VPdCWuIZnsOnVvE9_rt-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Motorista Frota&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="114.96000000000001" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="8VPdCWuIZnsOnVvE9_rt-77" edge="1" parent="1" source="8VPdCWuIZnsOnVvE9_rt-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130.03" y="450" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="8VPdCWuIZnsOnVvE9_rt-5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Motorista Comum" vertex="1">
-          <mxGeometry height="60" width="30" x="69.93" y="690" as="geometry" />
+          <mxGeometry height="60" width="30" x="45.03" y="510" as="geometry" />
         </mxCell>
         <mxCell id="8VPdCWuIZnsOnVvE9_rt-16" edge="1" parent="1" source="8VPdCWuIZnsOnVvE9_rt-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;dashPattern=8 8;endArrow=open;endFill=0;" target="8VPdCWuIZnsOnVvE9_rt-15">
           <mxGeometry relative="1" as="geometry" />
