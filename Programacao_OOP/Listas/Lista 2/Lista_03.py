@@ -248,9 +248,7 @@ class ContadorPalavras_ex9:
         return self.__dict_contagem.get(palavra.lower(), 0)
 
     def top_n(self, n):
-        lista_ordenada = sorted(self.__dict_contagem.items(),
-                                key=lambda item: item[1],
-                                reverse=True)
+        lista_ordenada = sorted(self.__dict_contagem.items(), key=lambda item: item[1], reverse=True)
 
         return lista_ordenada[:n]
 
@@ -291,13 +289,11 @@ def permissoes_combinadas(u1, u2):
 # Main
 def main():
 
-    exercicio = 1
+    exercicio = 10
 
     match exercicio:
 
-         
         case 1:
-
             print("Ex 1:\n")
 
             estacao = Estacao_ex1()
@@ -317,7 +313,6 @@ def main():
 
          
         case 2:
-
             print("Ex 2:\n")
 
             inventario = Inventario_ex2()
@@ -329,14 +324,11 @@ def main():
             for item in inventario[:2]:
                 print(item.nome)
 
-            print()
-
             for item in inventario.mais_caros(2):
                 print(f"{item.nome} | {item.preco}")
 
          
         case 3:
-
             print("Ex 3:\n")
 
             mapa = MapaRegistradores_ex3()
@@ -350,32 +342,21 @@ def main():
 
          
         case 4:
-
             print("Ex 4:\n")
 
             agenda = Agenda_ex4()
 
-            agenda.ADD_agend("Maria",
-                              Contato_ex4("99999-9999", "maria@email.com"))
-
-            agenda.ADD_agend("Joao",
-                              Contato_ex4("88888-8888", "joao@email.com"))
-
+            agenda.ADD_agend("Maria", Contato_ex4("99999-9999", "maria@email.com"))
+            agenda.ADD_agend("Joao", Contato_ex4("88888-8888", "joao@email.com"))
             agenda.list_dados()
-
-            print()
 
             agenda.atualizar("Maria", telefone="77777-7777")
-
             agenda.list_dados()
-
-            print()
-
-            print("Maria" in agenda)
+            
+            print("\n\nMaria" in agenda)
 
          
         case 5:
-
             print("Ex 5:\n")
 
             artigo1 = Artigo_ex5("Python")
@@ -387,12 +368,11 @@ def main():
             artigo2.marcar("backend")
             artigo2.marcar("oop")
 
-            print(tags_comuns(artigo1, artigo2))
-            print(todas_tags(artigo1, artigo2))
+            print(cods_comuns(artigo1, artigo2))
+            print(todas_cods(artigo1, artigo2))
 
          
         case 6:
-
             print("Ex 6:\n")
 
             lista_emails = [
@@ -409,15 +389,12 @@ def main():
 
          
         case 7:
-
             print("Ex 7:\n")
 
             cardapio = Cardapio_ex7()
 
             cardapio.ADD_prato("Bebidas", Prato_ex7("Suco", 8))
-
             cardapio.ADD_prato("Bebidas", Prato_ex7("Refrigerante", 6))
-
             cardapio.ADD_prato("Pratos", Prato_ex7("Lasanha", 25))
 
             for item in cardapio.list_card("Bebidas"):
@@ -427,7 +404,6 @@ def main():
 
          
         case 8:
-
             print("Ex 8:\n")
 
             historico = HistoricoLeituras_ex8()
@@ -443,7 +419,6 @@ def main():
 
          
         case 9:
-
             print("Ex 9:\n")
 
             texto = "python python dados estrutura python lista"
@@ -456,7 +431,6 @@ def main():
 
          
         case 10:
-
             print("Ex 10:\n")
 
             user1 = Usuario_ex10("Rafa")
