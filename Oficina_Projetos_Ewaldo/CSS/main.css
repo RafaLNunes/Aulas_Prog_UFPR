@@ -1,0 +1,17 @@
+/* Divs principais */
+.oculto
+{
+    display: none;
+}
+
+
+/* Bnts */
+.Ativo{
+    background-color: white;
+    color: black;
+}
+
+.Inativo{
+    background-color: black;
+    color: white;
+}

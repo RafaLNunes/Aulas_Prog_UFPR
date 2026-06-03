@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto DogFood</title>
+
+    
+
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <section class="Titulos_Menu">
+            <div class="Menu_Config"></div>
+            <div class="Titulos_Text">
+                <h1 class="Titulo_Main">AUTO DOGFOOD</h1>
+                <section class="SubTitle">
+                    <h3 class="Titulo_Control">Controle</h3>
+                    <h3 class="Div_Titulo">|</h3>
+                    <h3 class="Titulo_5W2H">O que</h3>
+                    <h3 class="Div_Titulo">|</h3>
+                    <h3 class="Titulo_5W2H">Quanto</h3>
+                    <h3 class="Div_Titulo">|</h3>
+                    <h3 class="Titulo_5W2H">Quando</h3>
+                    <h3 class="Div_Titulo">|</h3>
+                    <h3 class="Titulo_Dog">Teu DOG come</h3>
+                </section>
+            </div>
+        </section>
+        <section class="Menu_Bar">
+            <nav>
+                <ul>
+                    <li><button id="bnt_controle" class="BNT Bnt_Menu Ativo" onclick="trocarTela('controle')"><i class="fa-solid fa-sliders"></i>Controle</button></li>
+                    <li><button id="bnt_agenda" class="BNT Bnt_Menu Inativo" onclick="trocarTela('agenda')"><i class="fa-solid fa-calendar-days"></i>Agenda</button>
+                    </li>
+                    <li><button id="bnt_estatisticas" class="BNT Bnt_Menu Inativo" onclick="trocarTela('estatisticas')"><i class="fa-solid fa-chart-column"></i>Estatísticas</button></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section id="controle">
+            <h2>Tela Controle</h2>
+        </section>
+
+        <section id="agenda" class="oculto">
+            <h2>Tela Agenda</h2>
+        </section>
+
+        <section id="estatisticas" class="oculto">
+            <h2>Tela Estatísticas</h2>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+<script src="./JS/main.js"></script>
+<script src="./JS/conex.js"></script>
+
+</html>
