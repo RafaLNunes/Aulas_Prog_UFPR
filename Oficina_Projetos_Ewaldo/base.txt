@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto DogFood</title>
+
+
+
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <section class="SemiBody">
+        <header>
+            <section class="Titulos_Menu">
+                <div class="Menu_Config"></div>
+                <div class="Titulos_Text">
+                    <h1 class="Titulo_Main">AUTO DOGFOOD</h1>
+                    <section class="SubTitle">
+                        <h3 class="Titulo_Control">Controle</h3>
+                        <h3 class="Div_Titulo">|</h3>
+                        <h3 class="Titulo_5W2H">O que</h3>
+                        <h3 class="Div_Titulo">|</h3>
+                        <h3 class="Titulo_5W2H">Quanto</h3>
+                        <h3 class="Div_Titulo">|</h3>
+                        <h3 class="Titulo_5W2H">Quando</h3>
+                        <h3 class="Div_Titulo">|</h3>
+                        <h3 class="Titulo_Dog">Teu DOG come</h3>
+                    </section>
+                </div>
+            </section>
+            <section class="Menu_Bar">
+                <nav>
+                    <ul>
+                        <li><button id="bnt_controle" class="BNT Bnt_Menu Ativo" onclick="trocarTela('controle')"><i
+                                    class="fa-solid fa-sliders"></i>Controle</button></li>
+                        <li><button id="bnt_agenda" class="BNT Bnt_Menu Inativo" onclick="trocarTela('agenda')"><i
+                                    class="fa-solid fa-calendar-days"></i>Agenda</button>
+                        </li>
+                        <li><button id="bnt_estatisticas" class="BNT Bnt_Menu Inativo"
+                                onclick="trocarTela('estatisticas')"><i
+                                    class="fa-solid fa-chart-column"></i>Estatísticas</button></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+        <main>
+            <section id="controle" class="Conteiner">
+                <div class="Info_Comes">
+                    <h1 class="Titulo_h">QUANTO DE RAÇÃO POR PORÇÃO?</h1>
+                    <div class="qtd_comes">
+                        <button class="bnt_menos"></button>
+                        <input type="text" name="" id="" class="val_comes">
+                        <button class="bnt_mais"></button>
+                    </div>
+                </div>
+                <hr>
+                <div class="dar_racao">
+                    <h2 class="Titulo_h">RAÇÃO INSTANTANEA</h2>
+                    <button class="racao_now"><i></i>DAR RAÇÃO AGORA</button>
+                    <p class="porc_atual" id="porc_atual">será servido uma porção de xxxg</p>
+                </div>
+                <hr>
+                <div class="info_add">
+                    <section class="qtd_alimentacao Bloco_info">
+                        <div class="times_food">
+                            <i></i>
+                            <section class="Comeu_hoje">
+                                <h3 class="hoje_p Titulo_h">VEZES QUE COMEU HOJE<h3>
+                                <p class="Numb_QTD"></p>
+                            </section>
+                        </div>
+                        <div class="info_times_food">
+                            <p>Ultima refeição: xx:xx</p>
+                        </div>
+                    </section>
+                    <section class="next_alimentacao Bloco_info">
+                        <div class="next_food">
+                            <i></i>
+                            <section class="next_food_info">
+                                <h3 class="text_next_food Titulo_h1">PRÓXIMA REFEIÇÃO</h3>
+                                <p class="hora_next_food"></p>
+                            </section>
+                        </div>
+                        <div class="info_falta_food">
+                            <p>Faltam xxh xxmin</p>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section id="agenda" class="oculto Conteiner">
+                <div class="titulo_agenda">
+                    <h1 class="agenda_titulo">AGENDA DE REFEIÇÃO</h1>
+                    <p>Proximas refeições programadas</p>
+                </div>
+                <div class="list_horas">
+                    <section class="cada_list">
+                        <div class="number"><p>1</p></div>
+                        <div class="horario"><p>xx:xx</p></div>
+                        <div class="qtd_gramas"><p>xxxg</p></div>
+                        <button><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    </section>
+                </div>
+                <div class="bnt_add">
+                    <button><i class="fa-solid fa-plus"></i>ADICIONAR NOVAS REFEIÇÕES</button>
+                </div>
+            </section>
+
+            <section id="estatisticas" class="oculto Conteiner">
+                <h2>Tela Estatísticas</h2>
+            </section>
+        </main>
+        <footer>
+            <div class="conexao_esp"><i></i>
+                <h3>ESP32</h3>
+            </div>
+            <div class="conexao_atualizado"><i></i>
+                <h3 class="P_atualizacao" id="P_atualizacao"></h3>
+            </div>
+            <div class="conexao_supa"><i></i>
+                <h3>SUPABASE</h3>
+            </div>
+        </footer>
+    </section>
+</body>
+
+<script src="./JS/main.js"></script>
+<script src="./JS/conex.js"></script>
+
+</html>
