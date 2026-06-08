@@ -1,0 +1,650 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+  /* ===== CORES PRINCIPAIS ===== */
+
+  --Cor_Background: #05070A;
+  --Cor_Background_Secundaria: #0D1117;
+  --Cor_Background_Bloco: #11151C;
+  --Cor_Background_Bloco_Hover: #181D25;
+
+  /* ===== VERDE PRINCIPAL ===== */
+
+  --Cor_Principal: #B9F23D;
+  --Cor_Principal_Hover: #C9FF54;
+  --Cor_Principal_Escuro: #89B62A;
+
+  /* ===== TEXTO ===== */
+
+  --Cor_Texto: #F2F2F2;
+  --Cor_Texto_Secundario: #BDBDBD;
+  --Cor_Texto_Escuro: #7A7A7A;
+
+  /* ===== BORDAS ===== */
+
+  --Cor_Borda: #2A2F36;
+  --Cor_Borda_Clara: #3A414B;
+  --Cor_Borda_Destaque: #B9F23D;
+
+  /* ===== STATUS ===== */
+
+  --Cor_Sucesso: #3DDC84;
+  --Cor_Alerta: #FFD54A;
+  --Cor_Erro: #FF5C5C;
+
+  /* ===== SOMBRAS ===== */
+
+  --Sombra_Principal:
+    0px 0px 20px rgba(185, 242, 61, 0.08);
+
+  --Sombra_Bloco:
+    0px 4px 20px rgba(0, 0, 0, 0.35);
+
+  /* ===== GRADIENTES ===== */
+
+  --Gradiente_Menu:
+    linear-gradient(135deg,
+      #11151C,
+      #1A1F27);
+
+  --Gradiente_Btn:
+    linear-gradient(135deg,
+      #B9F23D,
+      #A4E52E);
+
+  --Gradiente_Fundo:
+    radial-gradient(circle at top,
+      #11151C,
+      #05070A);
+}
+
+/* =========================
+   DIVS PRINCIPAIS
+========================= */
+
+
+body {
+  width: 100%;
+  min-height: 90vh;
+  max-height: 95vh;
+
+  display: flex;
+  justify-content: center;
+
+  background: var(--Gradiente_Fundo);
+
+  color: var(--Cor_Texto);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+  BLOCO PRINCIPAL
+  ========================= */
+
+.SemiBody {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding: 20px;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+main {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 20px;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.Titulos_Menu {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15px;
+}
+
+.Titulos_Text {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.SubTitle {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.Menu_Bar {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px;
+
+  background: var(--Gradiente_Menu);
+
+  border: 1px solid var(--Cor_Borda);
+
+  border-radius: 20px;
+
+  box-shadow: var(--Sombra_Bloco);
+}
+
+.Menu_Bar nav {
+  width: 100%;
+}
+
+.Menu_Bar ul {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+  width: 100%;
+
+  list-style: none;
+}
+
+.Menu_Bar ul li {
+  flex: 1;
+}
+
+.Bnt_Menu {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px;
+
+  border-radius: 12px;
+}
+
+/* =========================
+   BOTÕES MENU
+========================= */
+
+.Ativo {
+  background: var(--Gradiente_Btn);
+
+  color: #111111;
+
+  border: 1px solid var(--Cor_Principal);
+
+  font-weight: 700;
+
+  box-shadow: var(--Sombra_Principal);
+
+  transition: 0.3s;
+}
+
+.Inativo {
+  background: var(--Cor_Background_Bloco);
+
+  color: var(--Cor_Texto);
+
+  border: 1px solid var(--Cor_Borda);
+
+  transition: 0.3s;
+}
+
+.Inativo:hover {
+  background: var(--Cor_Background_Bloco_Hover);
+
+  border-color: var(--Cor_Borda_Clara);
+}
+
+/* =========================
+BOTÕES PADRÃO
+========================= */
+
+.BNT {
+  cursor: pointer;
+
+  border-radius: 12px;
+
+  padding: 12px 20px;
+
+  transition: 0.3s;
+}
+
+/* =========================
+CONTAINERS
+========================= */
+
+.Conteiner {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  background: var(--Cor_Background_Bloco);
+
+  border: 1px solid var(--Cor_Borda);
+
+  border-radius: 20px;
+
+  box-shadow: var(--Sombra_Bloco);
+
+  padding: 20px;
+
+  flex: 1;
+
+  min-height: 0;
+
+  max-height: calc(100vh - 270px);
+
+  overflow-y: auto;
+}
+
+.Conteiner_controle {
+  justify-content: center;
+}
+
+
+/* =========================
+TÍTULOS
+========================= */
+
+.Titulo_h {
+  color: var(--Cor_Principal);
+
+  font-weight: 700;
+}
+
+.sub_titulo {
+  color: var(--Cor_Texto_Secundario);
+}
+
+/* =========================
+CONTROLE
+========================= */
+
+/* =========================
+   CONTROLE QUANTIDADE
+========================= */
+
+.controle_qtd_input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+}
+
+/* Botões + e - */
+
+.controle_qtd_input button {
+  width: 50px;
+  height: 50px;
+
+  border: 1px solid var(--Cor_Borda);
+
+  border-radius: 12px;
+
+  background: var(--Cor_Background_Bloco_Hover);
+
+  color: var(--Cor_Texto);
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.controle_qtd_input button:hover {
+  background: var(--Cor_Principal);
+
+  color: var(--Cor_Background);
+
+  border-color: var(--Cor_Principal);
+
+  box-shadow: var(--Sombra_Principal);
+
+  transform: scale(1.05);
+}
+
+/* Input */
+
+.controle_qtd_input input {
+  width: 120px;
+  height: 50px;
+
+  border: 1px solid var(--Cor_Borda);
+
+  border-radius: 12px;
+
+  background: var(--Cor_Background);
+
+  color: var(--Cor_Texto);
+
+  text-align: center;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.controle_qtd_input input:focus {
+  border-color: var(--Cor_Principal);
+
+  box-shadow:
+    0 0 10px rgba(185, 242, 61, 0.20);
+}
+
+.bnt_dar_racao {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--Cor_Principal);
+  width: calc(100% * 2 / 3);
+  font-size: 110%;
+}
+
+.bnt_dar_racao:hover {
+  background: var(--Cor_Principal_Hover);
+  box-shadow: 0 0 15px rgba(185, 242, 61, 0.35);
+  transform: translateY(-2px);
+}
+
+.bnt_dar_racao:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.area_controle_qtd,
+.area_controle_dar_racao {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.area_controle_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.bloco_info {
+  flex: 1;
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  gap: 15px;
+
+  padding: 20px;
+
+  background: var(--Cor_Background_Secundaria);
+
+  border: 1px solid var(--Cor_Borda);
+
+  border-radius: 18px;
+
+  box-shadow: var(--Sombra_Bloco);
+
+  max-height: fit-content;
+  max-width: fit-content;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.bloco_info i {
+  font-size: 200%;
+}
+
+.bloco_info::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.03);
+
+  pointer-events: none;
+}
+
+.bloco_info:hover {
+  border-color: var(--Cor_Principal_Escuro);
+}
+
+.dados_info_controle {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dados_bloco {
+  gap: 5px;
+}
+
+.sub_bloco {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 10px;
+}
+
+/* =========================
+  AGENDA
+  ========================= */
+
+
+
+.titulo_agenda {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.list_all_programado {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.cada_list {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.add_new_list {
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================
+  FOOTER
+  ========================= */
+
+footer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 20px;
+  height: 10%;
+
+  background-color: var(--Cor_Background_Bloco);
+
+  border: 1px solid var(--Cor_Borda);
+
+  border-radius: 20px;
+
+  box-shadow: var(--Sombra_Bloco);
+}
+
+/* =========================
+   BLOCOS DE CONEXÃO
+========================= */
+
+.conexao {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.conexao:not(:last-child) {
+  border-right: 1px solid var(--Cor_Borda);
+}
+
+/* =========================
+ÍCONES
+========================= */
+
+.conexao i {
+  font-size: 1.5rem;
+
+  color: var(--Cor_Principal);
+}
+
+/* =========================
+  TEXTO
+  ========================= */
+
+.conexao h3 {
+  color: var(--Cor_Principal);
+
+  font-size: 0.9rem;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+/* =========================
+  STATUS CENTRAL
+  ========================= */
+
+.atualizacao_S_N {
+  color: var(--Cor_Sucesso);
+}
+
+.oculto {
+  display: none;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media screen and (max-width:768px) {
+
+  .area_controle_info {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .cada_list {
+    flex-wrap: wrap;
+  }
+
+}
+
+/* =========================
+NOTEBOOK / DESKTOP
+========================= */
+
+@media screen and (min-width:769px) {
+
+  .SemiBody {
+    width: 60%;
+    max-width: 1400px;
+  }
+
+}
