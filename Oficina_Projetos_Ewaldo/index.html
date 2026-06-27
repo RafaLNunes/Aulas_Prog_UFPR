@@ -1,302 +1,98 @@
 <!DOCTYPE html>
-<html lang="Pt-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto DogFood</title>
+    <title>DoorsSecurety</title>
 
     <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
 </head>
 
 <body>
-    <section id="popup_agenda" class="popup_agenda oculto">
-
-        <div class="popup_conteudo">
-
-            <h2 class="Titulo_h">
-                NOVA REFEIÇÃO
-            </h2>
-
-            <div class="campo_popup">
-
-                <label>Peso (g)</label>
-
-                <input type="number" id="input_peso" min="1" placeholder="100">
-
-            </div>
-
-            <div class="campo_popup">
-
-                <label>Horário</label>
-
-                <div class="hora_popup">
-
-                    <input type="number" id="input_hora" min="0" max="23" placeholder="08">
-
-                    <span>:</span>
-
-                    <input type="number" id="input_min" min="0" max="59" placeholder="30">
-
-                </div>
-
-            </div>
-
-            <div class="acoes_popup">
-
-                <h2 id="titulo_popup">NOVA REFEIÇÃO</h2>
-
-                <button id="btn_excluir" class="oculto" onclick="excluirAgendaAtual()">
-                    EXCLUIR
-                </button>
-
-                <button class="confirmar_popup" onclick="confirmarAgenda()">
-                    CONFIRMAR
-                </button>
-
-                <button class="cancelar_popup" onclick="fecharPopupAgenda()">
-                    CANCELAR
-                </button>
-
-            </div>
-
+    <header>
+        <i class="Logo_Project"></i>
+        <div class="Title_Box">
+            <h1 class="Titulo_Pag">Doors security management</h1>
+            <h3 class="Sub_Titulo">Feito por: Rafael Lemos Nunes</h3>
         </div>
-
-    </section>
-
-    <section class="SemiBody" id="app">
-        <header>
-            <section class="Titulos_Menu">
-                <div class="Menu_Config"></div>
-                <div class="Titulos_Text">
-                    <h1 class="Titulo_Main Titulo_h">AUTO DOGFOOD</h1>
-                    <section class="SubTitle">
-                        <h3 class="Titulo_Control">Controle</h3>
-                        <h3 class="Div_Titulo">|</h3>
-                        <h3 class="Titulo_5W2H">O que</h3>
-                        <h3 class="Div_Titulo">|</h3>
-                        <h3 class="Titulo_5W2H">Quanto</h3>
-                        <h3 class="Div_Titulo">|</h3>
-                        <h3 class="Titulo_5W2H">Quando</h3>
-                        <h3 class="Div_Titulo">|</h3>
-                        <h3 class="Titulo_Dog">Teu DOG come</h3>
-                    </section>
-                </div>
-            </section>
-
-            <section class="Menu_Bar">
-                <nav>
-                    <ul>
-                        <li>
-                            <button id="bnt_controle" class="BNT Bnt_Menu Ativo" onclick="trocarTela('controle')">
-                                <i class="fa-solid fa-sliders"></i>
-                                Controle
-                            </button>
-                        </li>
-
-                        <li>
-                            <button id="bnt_agenda" class="BNT Bnt_Menu Inativo" onclick="trocarTela('agenda')">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                Agenda
-                            </button>
-                        </li>
-
-                        <li>
-                            <button id="bnt_estatisticas" class="oculto BNT Bnt_Menu Inativo"
-                                onclick="trocarTela('estatisticas')">
-                                <i class="fa-solid fa-chart-column"></i>
-                                Estatísticas
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-        </header>
-
-        <main>
-
-            <section id="controle" class="Conteiner Conteiner_controle">
-
-                <div class="area_controle_qtd">
-
-                    <h2 class="Titulo_h">
-                        QUANTO DE RAÇÃO POR PORÇÃO?
-                    </h2>
-
-                    <div class="controle_qtd_input">
-
-                        <button class="bnt_menos" id="bnt_menos">
-                            <i class="fa-solid fa-minus"></i>
-                        </button>
-
-                        <input type="text" name="qtd_porcao" id="qtd_porcao" class="input_qtd_porcao">
-
-                        <button class="bnt_mais" id="bnt_mais">
-                            <i class="fa-solid fa-plus"></i>
-                        </button>
-
+        <div class="User_Info">
+            <h1 class="UserName"></h1>
+            <button class="UserChoise">Escolher Usuário</button>
+        </div>
+    </header>
+    <main>
+        <Section class="Area_Loop">
+            <div class="Log_Info_Area">
+                <section class="Log_Individual">
+                    <div class="Log_In_Horario_inicial">
+                        <p class="Intro_Log_In_Tempo">Hórario de Abertura: </p>
+                        <p class="tempo_Log" id="Hora_Log_Init"></p>
+                        <p class="Separador_Tempo_Log_In">:</p>
+                        <p class="tempo_Log" id="Min_Log_Init"></p>
+                        <p class="Separador_Tempo_Log_In">:</p>
+                        <p class="tempo_Log" id="Seg_Log_Init"></p>
                     </div>
-
-                </div>
-
-                <hr>
-
-                <div class="area_controle_dar_racao">
-
-                    <h2 class="Titulo_h">
-                        RAÇÃO INSTANTANEA
-                    </h2>
-
-                    <button class="main_bnt bnt_dar_racao BNT" id="bnt_dar_racao" onclick="alimentarAgora()">
-
-                        <i class="fa-solid fa-bowl-food"></i>
-                        DAR RAÇÃO AGORA
-
-                    </button>
-
-                    <p class="label_porcao_atual" id="label_porcao_atual">
-
-                        será servido uma porção de xxxg
-
-                    </p>
-
-                </div>
-
-                <hr>
-
-                <div class="area_controle_info">
-
-                    <section class="bloco_info qtd_come_hoje">
-
-                        <i class="fa-solid fa-bowl-rice"></i>
-                        <div class="sub_bloco">
-
-                            <section class="dados_qtd_comeu dados_info_controle dados_bloco">
-
-                                <h3 class="Titulo_h">
-                                    VEZES QUE COMEU HOJE
-                                </h3>
-
-                                <p class="valor_qtd_comeu" id="valor_qtd_comeu">
-                                    0
-                                </p>
-
-                            </section>
-
-                            <div class="label_bloco">
-
-                                <p id="ultima_refeicao">
-                                </p>
-
-                            </div>
-                        </div>
-
-                    </section>
-
-                    <section class="bloco_info next_refeicao">
-
-                        <i class="fa-solid fa-clock"></i>
-                        <div class="sub_bloco">
-
-                            <section class="dados_bloco dados_info_controle">
-
-                                <h3 class="Titulo_h">
-                                    PRÓXIMA REFEIÇÃO
-                                </h3>
-
-                                <p class="hora_info_controle" id="hora_proxima_refeicao">
-                                    xx:xx
-                                </p>
-
-                            </section>
-
-                            <div class="label_bloco">
-
-                                <p id="tempo_restante">
-                                    Faltam xxh xxmin
-                                </p>
-
-                            </div>
-                        </div>
-
-                    </section>
-
-                </div>
-
-            </section>
-
-            <section id="agenda" class="Conteiner oculto">
-
-                <div class="titulo_agenda">
-
-                    <h2 class="Titulo_h">
-                        AGENDA DE REFEIÇÃO
-                    </h2>
-
-                    <p class="sub_titulo_agenda sub_titulo">
-                        Proximas refeições programadas
-                    </p>
-
-                </div>
-
-                <div class="list_all_programado" id="lista_refeicoes">
-                </div>
-
-                <div class="add_new_list">
-
-                    <button class="main_bnt bnt_add_info" id="bnt_add_refeicao" onclick="abrirPopupNovo()">
-
-                        <i class="fa-solid fa-plus"></i>
-                        ADICIONAR NOVAS REFEIÇÕES
-
-                    </button>
-
-                </div>
-
-            </section>
-
-            <section id="estatisticas" class="Conteiner oculto">
-                <h2>Tela Estatísticas</h2>
-            </section>
-
-        </main>
-
-        <footer>
-
-            <div class="conexao conex_esp" id="status_esp">
-
-                <i class="fa-solid fa-microchip"></i>
-                <h3 class="Titulo_h">ESP32</h3>
-
+                    <div class="Log_In_AreaCod">
+                        <!-- fa-solid fa-n -->
+                        <i class="Cod_Seq Cod_Seq1"></i>
+                        <i class="Cod_Seq Cod_Seq2"></i>
+                        <i class="Cod_Seq Cod_Seq3"></i>
+                        <i class="Cod_Seq Cod_Seq4"></i>
+                        <i class="Cod_Seq Cod_Seq5"></i>
+                    </div>
+                    <div class="Log_In_AreaPalavraMestra">
+                        <!-- Deixar em Linha -->
+                        <p class="Intro_Palavras">Palavra Mestra:</p>
+                        <!-- Ou P1 ou P2 terá um espaço no começo ou no fim -->
+                        <p class="Palavra_Part1">a</p>
+                        <p class="Palavra_Part2">b</p>
+                    </div>
+                    <div class="Log_In_AreaStatus">
+                        <!-- <i class="fa-regular fa-circle-check"></i> -->
+                        <!-- <i class="fa-regular fa-circle-xmark"></i> -->
+                        <i class="StatusLog"></i>
+                        <p class="StatusLog"></p>
+                    </div>
+                    <div class="Log_In_Horario_inicial">
+                        <p class="Intro_Log_In_Tempo">Hórario de Abertura: </p>
+                        <p class="tempo_Log" id="Hora_Log_Exit"></p>
+                        <p class="Separador_Tempo_Log_In">:</p>
+                        <p class="tempo_Log" id="Min_Log_Exit"></p>
+                        <p class="Separador_Tempo_Log_In">:</p>
+                        <p class="tempo_Log" id="Seg_Log_Exit"></p>
+                    </div>
+                    <hr>
+                </section>
             </div>
-
-            <div class="conexao conex_atual">
-
-                <i class="fa-solid fa-satellite-dish"></i>
-
-                <h3 class="atualizacao_S_N Titulo_h" id="status_atual">
-                    OFFLINE
-                </h3>
-
+            <div class="bnt_Area">
+                <button class="bnt bnt_CodMestre" id="bnt_CodMestre">Gerar Codigo Mestre</button>
             </div>
-
-            <div class="conexao conex_supa" id="status_supabase">
-
-                <i class="fa-solid fa-database"></i>
-                <h3 class="Titulo_h">SUPABASE</h3>
-
+        </Section>
+    </main>
+    <footer>
+        <section class="Conex_Info">
+            <div class="Esp_Conex">
+                <i class="Logo_Esp fa-solid fa-microchip"></i>
+                <p class="Info_Esp_Conex">ESP32</p>
             </div>
-
-        </footer>
-
-    </section>
+            <div class="Status_Conex">
+                <i class="Logo_Status fa-solid fa-satellite-dish"></i>
+                <p class="Info_Status_Conex"></p>
+            </div>
+            <div class="DT_Conex">
+                <i class="Logo_DT fa-solid fa-database"></i>
+                <p class="Info_DT_Conex">SUPABASE</p>
+            </div>
+        </section>
+    </footer>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="./JS/conex.js"></script>
-<script src="./JS/main.js"></script>
+<script src="./JS/script.js"></script>
 
 </html>
